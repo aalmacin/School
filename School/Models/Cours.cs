@@ -11,13 +11,24 @@ namespace School.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
     
     public partial class Cours
     {
+        [ScaffoldColumn(false)]
         public int Id { get; set; }
+        [DisplayName("Course Code")]
+        [Required(ErrorMessage = "You need to add a Course Code")]
         public string CourseCode { get; set; }
+        [DisplayName("Name")]
+        [Required(ErrorMessage = "You need to add a Course Name")]
         public string CourseName { get; set; }
+        [DisplayName("Description")]
         public string CourseDescription { get; set; }
+        [DisplayName("Cost")]
+        [Required(ErrorMessage = "You need to add a Course Cost")]
         public decimal CourseCost { get; set; }
     }
 }
