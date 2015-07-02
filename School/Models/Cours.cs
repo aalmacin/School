@@ -25,6 +25,7 @@ namespace School.Models
         [DisplayName("Name")]
         [Required(ErrorMessage = "You need to add a Course Name")]
         public string CourseName { get; set; }
+        [DataType(DataType.MultilineText)]
         [DisplayName("Description")]
         public string CourseDescription { get; set; }
         [DisplayName("Cost")]

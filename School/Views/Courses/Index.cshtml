@@ -1,16 +1,15 @@
 ﻿@model IEnumerable<School.Models.Cours>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Courses";
 }
 
-<h2>Index</h2>
+<h2>All of our courses are listed here</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
+<table class="table table-striped table-bordered">
         <th>
             @Html.DisplayNameFor(model => model.CourseCode)
         </th>
